@@ -1,3 +1,9 @@
+h1. Security Blog powerd by Enki
+
+Master = origin project
+MyBlog = customised blog
+
+
 h1. Enki
 
 A Ruby on Rails blogging app for the fashionable developer.
