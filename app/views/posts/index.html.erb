@@ -7,7 +7,7 @@
 <% end -%>
 
 <% if @posts.empty? -%>
-	<p>There are no posts yet.</p>
+	<p>Es gibt keine Beiträge.</p>
 <% else -%>
 	<% @posts.each do |post| -%>
 	<div class="post" id="<%= dom_id(post) %>">
@@ -15,6 +15,6 @@
 	</div>
 	<% end -%>
   <% if more_content? -%>
-    <div class="related">Looking for more? Head on over to the <%= link_to 'archives', archives_path %>.</div>
+    <div class="related">Suchst du mehr? Wirf ein blick in das <%= link_to 'Archiv', archives_path %>.</div>
   <% end -%>
 <% end -%>

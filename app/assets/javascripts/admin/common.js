@@ -33,7 +33,7 @@ function asyncDeleteForm(obj, options) {
       humanMsg.displayMsg(display);
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
-      humanMsg.displayMsg( 'Could not delete item, or maybe it has already been deleted' );
+      humanMsg.displayMsg( 'Konnte objekt nicht löschen, vielleicht wurde es bereits gelöscht' );
     }
   }, options || {}));
 }
@@ -50,7 +50,7 @@ function processUndo(path, options) {
       humanMsg.displayMsg( msg.message );
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
-      humanMsg.displayMsg( 'Could not undo' );
+      humanMsg.displayMsg( 'Rückgängig machen nicht möglich' );
     }
   }, options || {}));
 

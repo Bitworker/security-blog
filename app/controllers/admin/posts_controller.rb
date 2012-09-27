@@ -17,7 +17,7 @@ class Admin::PostsController < Admin::BaseController
     if @post.save
       respond_to do |format|
         format.html {
-          flash[:notice] = "Created post '#{@post.title}'"
+          flash[:notice] = "Beitrag erstellt '#{@post.title}'"
           redirect_to(:action => 'show', :id => @post)
         }
       end
@@ -32,7 +32,7 @@ class Admin::PostsController < Admin::BaseController
     if @post.update_attributes(params[:post])
       respond_to do |format|
         format.html {
-          flash[:notice] = "Updated post '#{@post.title}'"
+          flash[:notice] = "Beitrag aktualisiert '#{@post.title}'"
           redirect_to(:action => 'show', :id => @post)
         }
       end
@@ -70,7 +70,7 @@ class Admin::PostsController < Admin::BaseController
 
     respond_to do |format|
       format.html do
-        flash[:notice] = "Deleted post '#{@post.title}'"
+        flash[:notice] = "Beitrag geloescht '#{@post.title}'"
         redirect_to :action => 'index'
       end
       format.json {

@@ -4,9 +4,9 @@ class CommentsController < ApplicationController
 
   include UrlHelper
   OPEN_ID_ERRORS = {
-    :missing  => "Sorry, the OpenID server couldn't be found",
-    :canceled => "OpenID verification was canceled",
-    :failed   => "Sorry, the OpenID verification failed" }
+    :missing  => "Entschuldige, der OpenID Server konnte nicht gefunden werden",
+    :canceled => "OpenID Authentifizierung wurde abgebrochen",
+    :failed   => "Entschuldige, die OpenID Authentifizierung ist fehlgeschlagen" }
 
   before_filter :find_post, :except => [:new]
 

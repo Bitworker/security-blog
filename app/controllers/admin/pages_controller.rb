@@ -17,7 +17,7 @@ class Admin::PagesController < Admin::BaseController
     if @page.save
       respond_to do |format|
         format.html {
-          flash[:notice] = "Created page '#{@page.title}'"
+          flash[:notice] = "Seite erstellt '#{@page.title}'"
           redirect_to(:action => 'show', :id => @page)
         }
       end
@@ -32,7 +32,7 @@ class Admin::PagesController < Admin::BaseController
     if @page.update_attributes(params[:page])
       respond_to do |format|
         format.html {
-          flash[:notice] = "Updated page '#{@page.title}'"
+          flash[:notice] = "Seite aktualisiert '#{@page.title}'"
           redirect_to(:action => 'show', :id => @page)
         }
       end
@@ -70,7 +70,7 @@ class Admin::PagesController < Admin::BaseController
 
     respond_to do |format|
       format.html do
-        flash[:notice] = "Deleted page '#{@page.title}'"
+        flash[:notice] = "Seite geloescht '#{@page.title}'"
         redirect_to :action => 'index'
       end
       format.json {

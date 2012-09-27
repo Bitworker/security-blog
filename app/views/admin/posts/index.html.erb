@@ -1,19 +1,19 @@
-<h1>Your posts</h1>
+<h1>Deine Beiträge</h1>
 
 <table id='posts'>
   <thead>
     <tr>
-      <th>Published At</th>
-      <th>Title</th>
-      <th>Excerpt</th>
-      <th>Comments</th>
-      <th>Actions</th>
+      <th>Erstellt am</th>
+      <th>Kommentator</th>
+      <th>Auszug</th>
+      <th>Kommentare</th>
+      <th>Aktivität</th>
     </tr>
   </thead>
 
   <tbody>
     <% if @posts.empty? -%>
-      <tr><td colspan="5">There are no posts at this time.</td></tr>
+      <tr><td colspan="5">Es gibt keine Beiträge zur Zeit.</td></tr>
     <% else -%>
       <%= render :partial => 'post', :collection => @posts %>
     <% end -%>

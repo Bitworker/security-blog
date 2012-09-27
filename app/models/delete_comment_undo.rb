@@ -16,11 +16,11 @@ class DeleteCommentUndo < UndoItem
   end
 
   def description
-    "Deleted comment by '#{loaded_data['author']}'"
+    "Kommentar geluescht von '#{loaded_data['author']}'"
   end
 
   def complete_description
-    "Recreated comment by '#{loaded_data['author']}'"
+    "Kommentar zurueckgesetzt von '#{loaded_data['author']}'"
   end
 
   class << self

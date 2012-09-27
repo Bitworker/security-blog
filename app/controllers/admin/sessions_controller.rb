@@ -16,7 +16,7 @@ class Admin::SessionsController < ApplicationController
     return successful_login if allow_login_bypass? && params[:bypass_login]
 
     if params[:openid_url].blank? && !request.env[Rack::OpenID::RESPONSE]
-      flash.now[:error] = "You must provide an OpenID URL"
+      flash.now[:error] = "Du must die OpenID URL angeben"
       render :action => 'new'
     else
       authenticate_with_open_id(params[:openid_url]) do |result, identity_url|
@@ -24,7 +24,7 @@ class Admin::SessionsController < ApplicationController
           if enki_config.author_open_ids.include?(URI.parse(identity_url))
             return successful_login
           else
-            flash.now[:error] = "You are not authorized"
+            flash.now[:error] = "Du bist nicht berechtigt"
           end
         else
           flash.now[:error] = result.message

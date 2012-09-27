@@ -1,19 +1,19 @@
-<h1>Comments</h1>
+<h1>Kommentare</h1>
 
 <table id='comments'>
   <thead>
     <tr>
-      <th>Created At</th>
-      <th>Commenter</th>
-      <th>Excerpt</th>
-      <th>Post</th>
-      <th>Actions</th>
+      <th>Erstellt am</th>
+      <th>Kommentator</th>
+      <th>Auszug</th>
+      <th>Beitrag</th>
+      <th>Aktivität</th>
     </tr>
   </thead>
 
   <tbody>
     <% if @comments.empty? -%>
-      <tr><td colspan="5">There are no comments at this time.</td></tr>
+      <tr><td colspan="5">Es gibt keine Kommentare zur Zeit.</td></tr>
     <% else -%>
       <%= render :partial => 'comment', :collection => @comments %>
     <% end -%>

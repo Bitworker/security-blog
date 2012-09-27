@@ -24,7 +24,7 @@ class Admin::UndoItemsController < Admin::BaseController
         }
       end
     rescue UndoFailed
-      msg = "Could not undo, would result in an invalid state (i.e. a comment with no post)"
+      msg = "Kann nicht rueckgaengig gemacht werden, das Resultat waere eine inkonsistente Seite (z.B. ein Kommentar ohne Beitrag)"
       respond_to do |format|
         format.html {
           flash[:notice] = msg

@@ -12,12 +12,12 @@
   <% end -%>
 </ol>
 
-<div class="related">Looking for more? Head on over to the <%= link_to 'archives', archives_path %>.</div>
+<div class="related">Suchst du mehr? Wirf ein blick in das <%= link_to 'Archiv', archives_path %>.</div>
 
-<h2>Post a comment</h2>
+<h2>Kommentar erstellen</h2>
 <% unless @comment.errors.empty? -%>
 <div class="errors">
-  <h3>Comment not added!</h3>
+  <h3>Kommentar nicht hinzugefügt!</h3>
   <ul>
     <% @comment.errors.sort_by(&:first).each do |error| -%>
       <li><%= format_comment_error(error) %></li>
@@ -30,13 +30,12 @@
   <%= form_for [@post, @comment] do |form| -%>
     <p>
       <%= form.text_field 'author' %>
-      <%= form.label :author %>
-      <small>Name or <%= link_to 'OpenID', 'http://openidexplained.com/' %> (required)</small>
+      <small>Name oder <%= link_to 'OpenID', 'http://openidexplained.com/' %> (benötigt)</small>
     </p>
     <p>
       <%= form.text_area 'body' %><br/>
-      <small>(<%= link_to 'lesstile enabled', 'http://lesstile.rubyforge.org' %> - surround code blocks with ---)</small>
+      <small>(<%= link_to 'Lesstile aktiviert', 'http://lesstile.rubyforge.org' %>; benutze --- für code blocks.)</small>
     </p>
-    <p><%= form.submit 'Add Comment' %></p>
+    <p><%= form.submit 'Kommentar hinzufügen' %></p>
   <% end -%>
 </div>

@@ -15,3 +15,7 @@
 //= require common
 //= require live-comment-preview
 //= require_self
+
+$(document).ready(function () {
+  $('li.pagename_Archives > a').text('Archiv');
+});

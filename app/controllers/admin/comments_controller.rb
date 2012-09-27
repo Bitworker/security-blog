@@ -19,7 +19,7 @@ class Admin::CommentsController < Admin::BaseController
 
   def update
     if @comment.update_attributes(params[:comment])
-      flash[:notice] = "Updated comment by #{@comment.author}"
+      flash[:notice] = "Kommentar aktualisiert von #{@comment.author}"
       redirect_to :action => 'index'
     else
       render :action => 'show'
@@ -31,7 +31,7 @@ class Admin::CommentsController < Admin::BaseController
 
     respond_to do |format|
       format.html do
-        flash[:notice] = "Deleted comment by #{@comment.author}"
+        flash[:notice] = "Kommentar geloescht von #{@comment.author}"
         redirect_to :action => 'index'
       end
       format.json {
